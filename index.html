@@ -17,44 +17,47 @@
     <section class="container-main">
         <section class="container-election">
             <div class="luni">
-                <div>
-                    <img src="images/luni/luni.gif" alt="Luni">
+                <div class="luni-current">
+                    <img id="luni-current" src="images/luni/luni.gif" alt="Luni">
                 </div>
-                <a>
+                <a id="count-player">
                     Luni: 0
                 </a>
             </div>
-            <div class="election">
-                <img src="images/luni/rock.gif" alt="Rock">
+            <div class="election-luni">
+                <img id="current-img" src="images/luni/lunirandom.gif" alt="Choose">
             </div>
-            <div class="election">
-                <img src="images/pichi/paper.gif" alt="Rock">
+            <div class="election-pichi">
+                <img id="current-img-enemy" src="images/pichi/pichirandom.gif" alt="Choose">
             </div>
             <div class="pichi">
-                <div>
-                    <img src="images/pichi/pichi.gif" alt="Pichi">
+                <div class="pichi-current">
+                    <img id="pichi-current" src="images/pichi/pichi.gif" alt="Pichi">
                 </div>
-                <a>
+                <a id="count-enemy">
                     Pichi: 0
                 </a>
             </div>
     
         </section>
-    
+                
         <section class="result">
-            You lost!
+            Welcome!
         </section>
     
         <section class="container-choice">
-            <div class="choice">
+            <div id="rock" class="choice">
                 <img src="images/luni/rock.gif" alt="Rock">
             </div>
-            <div class="choice">
+            <div id="paper" class="choice">
                 <img src="images/luni/paper.gif" alt="Paper">
             </div>
-            <div class="choice">
+            <div id="scissors" class="choice">
                 <img src="images/luni/scissors.gif" alt="Scissors">
             </div>
+            <button id="button">
+                    Choose
+            </button>
         </section>
     </section>
 

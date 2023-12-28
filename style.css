@@ -42,6 +42,9 @@ header {
     align-items: center;
     width: 450px;
     height: 300px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+    background-image: url('images/back.gif');
+    background-repeat: repeat;
 }
 
 .container-election, .container-choice {
@@ -52,7 +55,30 @@ header {
     align-items: center;
 }
 
-.choice, .election {
+.container-choice {
+    width: 250px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.container-choice button {
+    width: 150px;
+    background: rgb(9, 38, 53);
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: 'PixelifySans';
+    color: rgb(190, 215, 84);
+    font-size: 15px;
+    margin: 15px
+}
+
+.container-choice button:active {
+    background: rgb(190, 215, 84);
+    color: rgb(9, 38, 53);
+}
+
+.choice, .election-luni, .election-pichi {
     width: 70px;
     height: 70px;
     background: rgb(92, 131, 116);
@@ -62,8 +88,15 @@ header {
     margin: 2%;
 }
 
-.election {
-    background: rgb(27, 66, 66);
+.choice:active, .choice-active {
+    outline: 2px solid rgb(9, 38, 53);
+    background: rgb(158, 200, 185);
+}
+
+.election-luni, .election-pichi {
+    width: 70px;
+    height: 70px;
+    background: none;
 }
 
 .luni , .pichi {
@@ -73,6 +106,14 @@ header {
     right: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    width: 100px;
+    height: 25px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -98,7 +139,7 @@ header {
 }
 
 .container-main {
-    max-width: 350px;
+    max-width: 330px;
     height: 300px;
 }
 
