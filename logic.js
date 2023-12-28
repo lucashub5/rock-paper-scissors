@@ -1,4 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    // ----------------------------------------
+
+    window.onload = function () {
+
+        const imagePaths = [
+            // Luni images cache
+            "images/luni/luni.gif",
+            "images/luni/lunibad.gif",
+            "images/luni/lunihappy.gif",
+            "images/luni/lunirandom.gif",
+            "images/luni/paper.gif",
+            "images/luni/rock.gif",
+            "images/luni/scissors.gif",
+            // Pichi images cache
+            "images/pichi/pichi.gif",
+            "images/pichi/pichibad.gif",
+            "images/pichi/pichihappy.gif",
+            "images/pichi/pichirandom.gif",
+            "images/pichi/paper.gif",
+            "images/pichi/rock.gif",
+            "images/pichi/scissors.gif",
+        ];
+    
+        const imageObjects = [];
+    
+        imagePaths.forEach(function (path) {
+            const img = new Image();
+            img.src = path;
+            imageObjects.push(img);
+        });
+    
+    };
+
+    // ----------------------------------------
+
     
     const choices = document.querySelectorAll(".choice");
     const buttonElement = document.getElementById("button");
