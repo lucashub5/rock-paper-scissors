@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'PixelifySans';
+    src: url('fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+  }
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'PixelifySans';
+    font-weight: 400;
+    color: rgb(190, 215, 84);
+    background: rgb(27, 66, 66);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(9, 38, 53);
+}
+
+.container-main {
+    border: 1px solid rgb(158, 200, 185);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 450px;
+    height: 300px;
+}
+
+.container-election, .container-choice {
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice, .election {
+    width: 70px;
+    height: 70px;
+    background: rgb(92, 131, 116);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.election {
+    background: rgb(27, 66, 66);
+}
+
+.luni , .pichi {
+    width: 100px;
+    position: relative;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pichi {
+    width: 100px;
+    position: relative;
+    top: 30px;
+    right: 0px;
+    left: 30px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+
+.luni {
+    right: 0px;
+
+}
+
+.pichi {
+    left: 0px;
+}
+
+.container-main {
+    max-width: 350px;
+    height: 300px;
+}
+
+}
