@@ -39,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const choices = document.querySelectorAll(".choice");
     const buttonElement = document.getElementById("button");
     const electionLuniContainer = document.querySelectorAll("election-luni");
+    const buttonStart = document.getElementById("button-start");
+    const buttonReset = document.getElementById("button-reset");
+    const countPlayerText = document.getElementById("count-player");
+    const countEnemyText = document.getElementById("count-enemy");
+
     let selectedChoice = "";
 
     const choicesArray = ["rock", "paper", "scissors"];
@@ -49,6 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let imgLuni = "";
     let imgPichi = "";
+
+
+    buttonStart.addEventListener("click", function () {
+        document.querySelector(".container-start").style.display = "none";
+        document.querySelector(".container-main").style.display = "flex";
+      });
   
     choices.forEach(choice => {
       choice.addEventListener("click", function () {
@@ -67,7 +78,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
         getResult();
 
+        if (countPlayer == 5 || countEnemy == 5) {
+            document.querySelector(".container-main").style.display = "none";
+            document.querySelector(".container-reset").style.display = "flex";
+
+            const resultElement = document.querySelector(".result-text");
+
+            if (countPlayer == 5) {
+                resultElement.textContent = "You win!"
+            }
+            else {
+                resultElement.textContent = "You lose"
+            }
+        }
+
       });
+
+    buttonReset.addEventListener("click", function () {
+        countPlayer = 0;
+        countEnemy = 0;
+        countPlayerText.textContent = "Luni: " + countPlayer;
+        countEnemyText.textContent = "Pichi: " + countEnemy;
+
+        document.querySelector(".container-reset").style.display = "none";
+        document.querySelector(".container-main").style.display = "flex";
+      });  
 
     function changeImgPlayer() {
         const currentImgElement = document.getElementById("current-img");
@@ -97,9 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getResult() {
         const resultElement = document.querySelector(".result");
-        const countPlayerText = document.getElementById("count-player");
-        const countEnemyText = document.getElementById("count-enemy");
-
 
         if (selectedChoice === selectedChoiceEnemy) {
             resultElement.textContent = "Draw";
