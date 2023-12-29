@@ -74,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Texto seleccionado: ", selectedChoice);
 
         changeImgPlayer();
+
+        getRandomChoice();
         changeImgEnemy();
 
         getResult();
@@ -102,6 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.querySelector(".container-reset").style.display = "none";
         document.querySelector(".container-main").style.display = "flex";
+
+        selectedChoice = "lunirandom";
+        changeImgPlayer();
+    
+        selectedChoiceEnemy = "pichirandom";
+        changeImgEnemy();
       });  
 
     function changeImgPlayer() {
@@ -114,9 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function changeImgEnemy() {
-
-        getRandomChoice();
-
         const currentImgElement = document.getElementById("current-img-enemy");
         currentImgElement.remove();
         const newImgElement = document.createElement("img");
