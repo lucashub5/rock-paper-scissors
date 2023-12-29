@@ -12,6 +12,8 @@ body {
     font-weight: 400;
     color: rgb(190, 215, 84);
     background: rgb(27, 66, 66);
+    background-image: url('images/back.gif');
+    background-repeat: repeat;
 }
 
 main {
@@ -43,8 +45,7 @@ header {
     width: 450px;
     height: 300px;
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
-    background-image: url('images/back.gif');
-    background-repeat: repeat;
+    background: rgb(27, 66, 66);
 }
 
 .container-main, .container-reset {
